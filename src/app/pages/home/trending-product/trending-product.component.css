@@ -99,7 +99,6 @@
     }
 }
 
-/* For tablets */
 @media (max-width: 900px) {
     .trending-product {
         width: 45%;
