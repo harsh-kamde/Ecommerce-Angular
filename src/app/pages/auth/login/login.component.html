@@ -1,0 +1,35 @@
+<section class="container">
+    <h2>Ecommerce</h2>
+    <form [formGroup]="form" (ngSubmit)="handleSubmit()" autocomplete="off">
+      
+      <div class="form-group">
+        <input type="email" placeholder="Enter email" formControlName="email">
+        @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <div class="error">* Valid email is required</div>
+        }
+      </div>
+  
+      <div class="form-group password-group">
+        <input [type]="showPassword() ? 'text' : 'password'" placeholder="Your password" formControlName="password">
+        
+
+        @if(showPassword()) {
+          <span class="eye-icon" (click)="togglePassword()">🙈</span>
+        }@else{
+          <span class="eye-icon" (click)="togglePassword()">👁️</span>
+        }
+        @if (form.get('password')?.invalid && form.get('password')?.touched) {
+          <div class="error">* Password must be at least 6 characters</div>
+        }
+      </div>
+  
+      <button type="submit" [disabled]="form.invalid">Sign in</button>
+
+      @if(error){
+          <div class="error">* {{error}}</div>
+      }
+      <a routerLink="/" class="forgot-password">Forgot Password?</a>
+        <p>Don't have an account? <a routerLink="/signup">Register</a></p>
+    </form>
+  </section>
+  

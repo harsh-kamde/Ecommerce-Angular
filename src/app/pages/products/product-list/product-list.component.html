@@ -1,0 +1,53 @@
+<section class="title">
+    <h2>All Products</h2>
+</section>
+<section class="filters" [class.filters-deactive]="!isFilterVisible()">
+  <div class="filter-image" (click)="toggleFilters()">
+    <img [src]="filterImg" alt="" [style]="isFilterVisible() ? 'transform: scaleY(-1)' : 'transform: scaleY(1)'">
+    <p>Filters</p>
+  </div>
+    <div class="filter-container">
+     <div class="gender-container">
+      <h3>Gender: </h3>
+      <label>
+        <input type="radio" name="gender" value="men" (change)="updateGender('men')" [checked]="gender() === 'men'"> Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="women" (change)="updateGender('women')" [checked]="gender() === 'women'"> Female
+      </label>
+     </div>
+  
+     <div class="category-container">
+      <h3>Category: </h3>
+      <label>
+        <input type="radio" name="category" value="electronics" (change)="updateCategory('electronics')" [checked]="category() === 'electronics'"> Electronics
+      </label>
+      <label>
+        <input type="radio" name="category" value="jewelery" (change)="updateCategory('jewelery')" [checked]="category() === 'jewelery'"> Jewellery
+      </label>
+      <label>
+        <input type="radio" name="category" value="clothing" (change)="updateCategory('clothing')" [checked]="category() === 'clothing'"> Clothing
+      </label>
+     </div>
+  
+      <a (click)="clearFilters()">Clear all filters</a>
+    </div>
+  </section>
+<section class="products">
+    @if (getProducts().length > 0) {
+        @for (product of getProducts(); track product.id) {
+            <section class="trending-product" (click)="showProduct(product.id)">
+                <div class="image-container">
+                    <img [src]="product.image" [alt]="product.title">
+                    <button class="cart-icon" (click)="addToCart(product); $event.stopPropagation()">
+                        <img [src]="cartImg" alt="">
+                    </button>
+                </div>
+                <div class="product-info">
+                    <p class="product-title">{{ product.title }}</p>
+                    <span class="product-price">{{ product.price | currency: "USD" }}</span>
+                </div>
+            </section>
+        }
+    }
+</section>

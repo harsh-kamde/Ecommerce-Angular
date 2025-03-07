@@ -1,0 +1,49 @@
+<section class="product-details">
+    <div class="product-image">
+        <img [src]="productSignal().image" alt="Product Image">
+    </div>
+    <div class="product-info">
+        <h1 class="product-title">{{productSignal().title}}</h1>
+        <div class="rating">
+            <span class="rating-value">{{productSignal().rating.rate}} ★</span>
+            <span class="rating-count">({{productSignal().rating.count}} Ratings)</span>
+        </div>
+        <div class="price">
+            <span class="current-price">{{ productSignal().price | currency: 'USD' }}</span>
+            <span class="original-price">{{ getOriginalPrice() | currency: 'USD' }}</span>
+            <span class="discount">{{ discountPercentage }}% OFF</span>
+        </div>
+        <div class="buttons">
+            @if(isAddedToCart()){
+                <div class="product-count">
+                    <button (click)="decrementProductCount(productSignal().id)"><span>-</span></button>
+                    <span>{{ getItemQuantity(productSignal().id) }}</span>
+                    <button (click)="incrementProductCount(productSignal().id)"><span>+</span></button>
+                </div>
+                <button app-button (click)="removeFromCart(productSignal().id)"><span>Remove from Cart</span></button>
+            }@else{
+                <button app-button (click)="addToCart(productSignal().id)"><span>Add to Cart</span></button>
+                <button class="buy-now" (click)="buyNow()">Buy Now</button>
+            }
+        </div>
+        <div class="button details">
+            <h2>Product Details</h2>
+            <p>{{ productSignal().description }}</p>
+        </div>
+    </div>
+</section>
+<section class="title">
+    <h2>Similar Products</h2>
+</section>
+<section class="products">
+    @if(similarProductsSignal().length > 0){
+        @for(product of similarProductsSignal(); track product.id){
+            <section class="similar-product" (click)="showProduct(product.id)">
+                <img [src]="product.image" alt="product.title">
+                <p>{{product.title}}</p>
+                <span>{{product.price | currency:"USD"}}</span>
+                <button app-button (click)="buyNow()"><span>Buy Now</span></button>
+            </section>
+        }
+    }
+</section>

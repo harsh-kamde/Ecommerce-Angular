@@ -1,0 +1,15 @@
+<header>
+    <div class="logo" (click)="handleNavigateToHome()">Ecommerce</div>
+    <ul class="nav-list">
+        <li class="nav-item search-bar" id="search-bar">
+            <img [src]="searchIcon" alt="search icon">
+            <input type="text" name="query" placeholder="Search products by name, category ..."
+            [(ngModel)]="query" autocomplete="off">
+        </li>
+        <li class="nav-item" (click)="handleNavigateToCart()">
+            <img [src]="cartIcon" alt="cart-icon">
+            <span class="cart-count">{{cartCounter()}}</span>
+        </li>
+        <li class="nav-item" (click)="handleNavigateToUser()"><img [src]="userIcon" alt=""></li>
+    </ul>
+</header>

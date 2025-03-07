@@ -1,0 +1,134 @@
+
+.title {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 2.4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title h2::before,
+.title h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: white;
+}
+
+.title h2::before {
+    left: -60px;
+}
+
+.title h2::after {
+    right: -60px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.trending-product {
+    background: #8b0000;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    text-align: start;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.trending-product:hover {
+    transform: scale(1.05);
+}
+
+.trending-product img {
+    min-height: 35rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.trending-product p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.trending-product span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.trending-product button {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 2rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.trending-product button:hover {
+    background-color: #eee;
+    scale: 1.05;
+}
+
+@media (max-width: 1200px) {
+    .trending-product {
+        width: 30%;
+    }
+
+    .trending-product img {
+        height: 30rem;
+    }
+}
+
+/* For tablets */
+@media (max-width: 900px) {
+    .trending-product {
+        width: 45%;
+    }
+
+    .trending-product img {
+        height: 25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .trending-product {
+        width: 90%;
+    }
+
+    .trending-product img {
+        height: 10rem;
+    }
+
+    .products {
+        gap: 1.5rem;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .title h2::before,
+    .title h2::after {
+        width: 30px;
+    }
+}

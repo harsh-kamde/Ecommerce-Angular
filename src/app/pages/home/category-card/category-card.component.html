@@ -1,0 +1,5 @@
+<section class="category-cards">
+    @for(item of data; track item.id){
+        <card [cardData]="item.contents"/>
+    }
+</section>

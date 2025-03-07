@@ -1,0 +1,43 @@
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0 5%;
+    background-color: rgba(255, 0, 0, 0.514);
+}
+
+.text-side{
+    display: flex;
+    padding-left: 5%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    text-wrap: wrap;
+    font-size: 2rem;
+}
+
+.text-side button{
+    padding: 0.6rem 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    border: none;
+}
+
+img{
+    width: 90%;
+}
+
+.text-side button:hover{
+    background-color: #ccc;
+}
+
+@media screen and (max-width:650px){
+    .hero{
+        flex-direction: column-reverse;
+    }
+}

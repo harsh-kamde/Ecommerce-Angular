@@ -1,0 +1,19 @@
+<section class="card-main">
+    <section class="cards-title">
+        <p>{{ cardData.title }}</p>
+      </section>
+      
+      <section class="card-content">
+        @for(card of cardData.items; track card.id){
+        <section class="img-container">
+          <img [src]="imagepath(card.img)" class="card-img" [alt]="card.name" />
+          <span class="card-name">{{ card.name }}</span>
+        </section>
+      
+        }
+      </section>
+      
+      <section class="card-footer">
+        <a routerLink="/products">Explore more...</a>
+      </section>
+</section>

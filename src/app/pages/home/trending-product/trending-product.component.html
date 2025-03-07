@@ -1,0 +1,15 @@
+<section class="title">
+    <h2>Trending Products</h2>
+</section>
+<section class="products">
+    @if(trendingProducts().length > 0){
+        @for(product of trendingProducts(); track product.id){
+            <section class="trending-product" (click)="showProduct(product.id)">
+                <img [src]="product.image" alt="product.title">
+                <p>{{product.title}}</p>
+                <span>{{product.price | currency:"USD"}}</span>
+                <button app-button (click)="buyNow($event,product)"><span>Buy Now</span></button>
+            </section>
+        }
+    }
+</section>

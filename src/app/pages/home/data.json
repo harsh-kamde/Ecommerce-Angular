@@ -1,0 +1,115 @@
+[
+    {
+      "id": "homeDecor",
+      "contents": {
+        "title": "Revamp your home in style",
+        "items": [
+          {
+            "id": "hp1",
+            "name": "lighting",
+            "img": "lighting.jpg"
+          },
+          {
+            "id": "hp2",
+            "name": "Figurines, vases & more",
+            "img": "vases.jpg"
+          },
+          {
+            "id": "hp3",
+            "name": "home storage",
+            "img": "home storage.jpg"
+          },
+          {
+            "id": "hp4",
+            "name": "Cushion covers, bedsheets & more",
+            "img": "bedsheets.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "accessories",
+      "contents": {
+        "title": "Top mobile accessories for your smartphone",
+        "items": [
+          {
+            "id": "hp5",
+            "name": "Powerbanks",
+            "img": "powerbanks.jpg"
+          },
+          {
+            "id": "hp6",
+            "name": "Cases and covers",
+            "img": "covers.jpg"
+          },
+          {
+            "id": "hp7",
+            "name": "Cables and chargers",
+            "img": "cables.jpg"
+          },
+          {
+            "id": "hp8",
+            "name": "Headsets",
+            "img": "neckband.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "footwear",
+      "contents": {
+        "title": "Up to 60% off | Footwear & handbags",
+        "items": [
+          {
+            "id": "hp9",
+            "name": "Sports shoes",
+            "img": "sports shoes.jpg"
+          },
+          {
+            "id": "hp10",
+            "name": "Men's shoes",
+            "img": "mens shoe.jpg"
+          },
+          {
+            "id": "hp11",
+            "name": "Wome's shoes",
+            "img": "women shoe.jpg"
+          },
+          {
+            "id": "hp12",
+            "name": "Handbags",
+            "img": "handbags.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "homeAccessories",
+      "contents": {
+        "title": "Starting 99 | Home inprovement essentials",
+        "items": [
+          {
+            "id": "hp13",
+            "name": "Spin mops, wipes & more",
+            "img": "wiper.jpg"
+          },
+          {
+            "id": "hp14",
+            "name": "Bathroom hardware & accessories",
+            "img": "bathroomHardware.jpg"
+          },
+          {
+            "id": "hp15",
+            "name": "Hammers, screwdrivers & more",
+            "img": "hammer.jpg"
+          },
+          {
+            "id": "hp16",
+            "name": "Extension boards, plugs & more",
+            "img": "extension.jpg"
+          }
+        ]
+      }
+    }
+  ]
+  

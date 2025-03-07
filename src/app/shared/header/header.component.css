@@ -1,0 +1,82 @@
+header{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 5%;
+    font-size: 2rem;
+    background-color: black;
+    box-shadow: 0px 5px 5px rgba(93, 90, 90, 0.37);
+}
+
+.logo{
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+}
+
+ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1rem;
+    flex: 1;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+ul li img{
+    width: 2rem;
+    margin: auto 0;
+}
+
+.cart-count{
+    position:absolute;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.search-bar{
+    width: 50%;
+    min-width: 350px;
+    border-radius: .5rem;
+    padding-left: 0.5rem;
+    border: 1px solid white;
+}
+
+.search-bar img{
+    width: 1.5rem;
+}
+
+.search-bar input{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding:0 10px;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    header{
+        margin-bottom: 4rem;
+    }
+    header ul .search-bar{
+        position: absolute;
+        margin-bottom: -7rem;
+        left: 2.5rem;
+        width: 90%;
+    }
+}
